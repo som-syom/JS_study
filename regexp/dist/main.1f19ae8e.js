@@ -118,7 +118,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-console.log("123");
+var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\nabbcccdddd\nhttp:://localhost:1234\n\uAC00\uB098\uB2E4\uB77C \n"; // const regexp = new RegExp("the", "gi");
+// const regexp = /the/gi;
+// console.log(regexp.test(str));
+// console.log(str.match(/\bf\w{1,}\b/g)); // f로 시작하는 모든 영단어
+// const h = `  the hello  world		!
+// `;
+// console.log(h.replace(/\s/g, "")); // 공백 없애기
+
+console.log(str.match(/(?<=@).{1,}/g));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
